@@ -14,4 +14,18 @@ function createGrid(rows) {
   }
 }
 
+function addHovering() {
+  const items = document.querySelectorAll(".item");
+  items.forEach((item) => {
+    item.addEventListener(
+      "mouseover",
+      () => {
+        item.style.backgroundColor = "coral";
+      },
+      { once: true }
+    );
+  });
+}
+
 createGrid(16);
+addHovering();
